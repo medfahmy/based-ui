@@ -19,3 +19,7 @@
 // @mixin margin-top {
 //     margin-top: map-get($spacing, @content);
 // }
+
+@mixin padding($space) {
+    padding: map-get($spacing, $space);
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import { Space } from "@ds.e/foundation";
+import { Space } from "@ds/foundation";
 
 type ColorProps = {
     hex: string;

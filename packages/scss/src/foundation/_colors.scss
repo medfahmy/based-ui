@@ -10,7 +10,9 @@ $btn-primary-border-hover: var(--dse-btn-primary-border-hover, $dark) !default;
 
 // forms
 $form-color: var(--dse-form-color, $dark) !default;
-$form-bg: var(--dse-form-bg, $white) !default;
+$form-bg-color: var(--dse-form-bg, $white) !default;
 $form-error-color: var(--dse-form-error-color, $red) !default;
 $form-error-border: var(--dse-form-error-border, $red) !default;
 $form-border-focus-color: var(--dse-form-border-focus-color, $blue) !default;
+
+$form-border-color: var(--dse-form-border-color, $white-dark) !default;

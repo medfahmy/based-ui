@@ -1,7 +1,7 @@
 import React from "react";
-import "@ds.e/scss/lib/global.css";
-import "@ds.e/scss/lib/margin.css";
-import "@ds.e/scss/lib/text.css";
+import "@ds/scss/lib/global.css";
+import "@ds/scss/lib/margin.css";
+import "@ds/scss/lib/text.css";
 export type SelectOption = {
     label: string;
     value: string;

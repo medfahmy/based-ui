@@ -15,5 +15,5 @@ export default {
         preserveModules: true,
     },
     plugins: [typescript()],
-    external: ["react", "@ds.e/foundation"],
+    external: ["react", "@ds/foundation"],
 };

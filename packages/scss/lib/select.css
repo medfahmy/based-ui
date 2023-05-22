@@ -1,0 +1,32 @@
+.ds-select {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.ds-select__label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--dse-form-border-color, #f1f2f3);
+  background: var(--dse-form-bg, #ffffff);
+  font-family: var(--dse-body-font-family, "Playfair", serif);
+  cursor: pointer;
+}
+
+.ds-select__overlay {
+  padding: 0;
+  margin: 0;
+  border: 1px solid var(--dse-form-border-color, #f1f2f3);
+  background-color: var(--dse-form-bg, #ffffff);
+  z-index: 99;
+  position: absolute;
+  width: 100%;
+}
+
+.ds-select__option {
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}

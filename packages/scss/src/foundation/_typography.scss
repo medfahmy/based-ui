@@ -1,6 +1,7 @@
 // body text sizes
 $body-font-size: var(--dse-body-font-size, map-get($fs, fs-md)) !default;
 $body-font-weight: var(--dse-body-font-weight, map-get($fs, fw-regular)) !default;
+$body-font-family: var(--dse-body-font-family, $playfair) !default;
 
 // heading text sizes
 $h-1-font-size: var(--dse-h1-font-size, $h1) !default;

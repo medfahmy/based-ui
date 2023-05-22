@@ -1,15 +1,16 @@
 import React from "react";
-import { Select, SelectOption } from "@ds.e/react";
+import { Select, SelectOption, Margin, Text } from "@ds/react";
 import { createRoot } from "react-dom/client";
 
-import "@ds.e/scss/lib/global.css";
-import "@ds.e/scss/lib/margin.css";
+import "@ds/scss/lib/global.css";
+import "@ds/scss/lib/select.css";
+import "@ds/scss/lib/margin.css";
 
 function App() {
     const options = [
-        { label: "Option 1", value: "option-1" },
-        { label: "Option 2", value: "option-2" },
-        { label: "Option 3", value: "option-3" },
+        { label: "Strict Black", value: "option-1" },
+        { label: "Heavenly Green", value: "option-2" },
+        { label: "Sweet Pink", value: "option-3" },
     ];
 
     const onOptionSelected = (option: SelectOption) => {
@@ -17,11 +18,14 @@ function App() {
     };
 
     return (
-        <Select
-            label="Select an option"
-            options={options}
-            onOptionSelected={onOptionSelected}
-        />
+        <Margin space="lg">
+            <Select
+                label="Select an option"
+                options={options}
+                onOptionSelected={onOptionSelected}
+            />
+            <Text>this is some text</Text>
+        </Margin>
     );
 }
 
