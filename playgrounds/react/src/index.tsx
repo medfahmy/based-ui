@@ -2,9 +2,9 @@ import React from "react";
 import { Select, SelectOption, Margin, Text } from "@ds/react";
 import { createRoot } from "react-dom/client";
 
-import "@ds/scss/lib/global.css";
-import "@ds/scss/lib/select.css";
-import "@ds/scss/lib/margin.css";
+import "@ds/scss/styles/global.css";
+import "@ds/scss/styles/select.css";
+import "@ds/scss/styles/margin.css";
 
 function App() {
     const options = [

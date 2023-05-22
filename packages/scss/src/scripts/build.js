@@ -9,7 +9,7 @@ function compile(filepath, filename) {
         includePaths: [path.resolve("src")],
     });
 
-    fs.writeFileSync(path.resolve("lib", filename), result.css.toString());
+    fs.writeFileSync(path.resolve("styles", filename), result.css.toString());
 }
 
 function getComponents() {

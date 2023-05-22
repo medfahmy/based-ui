@@ -9,7 +9,7 @@ export default {
         "molecules/select": "src/molecules/select.tsx",
     },
     output: {
-        dir: "lib",
+        dir: "dist",
         format: "esm",
         sourcemap: true,
         preserveModules: true,

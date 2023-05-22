@@ -2527,76 +2527,7 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/react.development.js');
 }
-},{"./cjs/react.development.js":"../../../node_modules/react/cjs/react.development.js"}],"../../../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
-  return bundleURL;
-}
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
-  return '/';
-}
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)?\/[^/]+(?:\?.*)?$/, '$1') + '/';
-}
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"../../../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-function updateLink(link) {
-  var newLink = link.cloneNode();
-  newLink.onload = function () {
-    link.remove();
-  };
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-var cssTimeout = null;
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-    cssTimeout = null;
-  }, 50);
-}
-module.exports = reloadCSS;
-},{"./bundle-url":"../../../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../../../node_modules/@ds/scss/lib/global.css":[function(require,module,exports) {
-
-        var reloadCSS = require('_css_loader');
-        module.hot.dispose(reloadCSS);
-        module.hot.accept(reloadCSS);
-      
-},{"_css_loader":"../../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../node_modules/@ds/scss/lib/margin.css":[function(require,module,exports) {
-
-        var reloadCSS = require('_css_loader');
-        module.hot.dispose(reloadCSS);
-        module.hot.accept(reloadCSS);
-      
-},{"_css_loader":"../../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../node_modules/@ds/scss/lib/text.css":[function(require,module,exports) {
-
-        var reloadCSS = require('_css_loader');
-        module.hot.dispose(reloadCSS);
-        module.hot.accept(reloadCSS);
-      
-},{"_css_loader":"../../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../node_modules/@ds/react/lib/molecules/select.js":[function(require,module,exports) {
+},{"./cjs/react.development.js":"../../../node_modules/react/cjs/react.development.js"}],"../../../node_modules/@ds/react/dist/molecules/select.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2604,9 +2535,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Select = Select;
 var _react = _interopRequireDefault(require("react"));
-require("@ds/scss/lib/global.css");
-require("@ds/scss/lib/margin.css");
-require("@ds/scss/lib/text.css");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 function Select({
   options = [],
@@ -2668,7 +2596,7 @@ function ChevronUp() {
     d: "M5.5 15.75l7.5-7.5 7.5 7.5"
   }));
 }
-},{"react":"../../../node_modules/react/index.js","@ds/scss/lib/global.css":"../../../node_modules/@ds/scss/lib/global.css","@ds/scss/lib/margin.css":"../../../node_modules/@ds/scss/lib/margin.css","@ds/scss/lib/text.css":"../../../node_modules/@ds/scss/lib/text.css"}],"../../../node_modules/@ds/react/lib/atoms/margin.js":[function(require,module,exports) {
+},{"react":"../../../node_modules/react/index.js"}],"../../../node_modules/@ds/react/dist/atoms/margin.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2705,7 +2633,7 @@ function Margin({
     className: className
   }, children);
 }
-},{"react":"../../../node_modules/react/index.js"}],"../../../node_modules/@ds/react/lib/atoms/text.js":[function(require,module,exports) {
+},{"react":"../../../node_modules/react/index.js"}],"../../../node_modules/@ds/react/dist/atoms/text.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2723,7 +2651,7 @@ function Text({
     className: className
   }, children);
 }
-},{"react":"../../../node_modules/react/index.js"}],"../../../node_modules/@ds/react/lib/index.js":[function(require,module,exports) {
+},{"react":"../../../node_modules/react/index.js"}],"../../../node_modules/@ds/react/dist/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2750,7 +2678,7 @@ Object.defineProperty(exports, "Text", {
 var _select = require("./molecules/select.js");
 var _margin = require("./atoms/margin.js");
 var _text = require("./atoms/text.js");
-},{"./molecules/select.js":"../../../node_modules/@ds/react/lib/molecules/select.js","./atoms/margin.js":"../../../node_modules/@ds/react/lib/atoms/margin.js","./atoms/text.js":"../../../node_modules/@ds/react/lib/atoms/text.js"}],"../../../node_modules/scheduler/cjs/scheduler.development.js":[function(require,module,exports) {
+},{"./molecules/select.js":"../../../node_modules/@ds/react/dist/molecules/select.js","./atoms/margin.js":"../../../node_modules/@ds/react/dist/atoms/margin.js","./atoms/text.js":"../../../node_modules/@ds/react/dist/atoms/text.js"}],"../../../node_modules/scheduler/cjs/scheduler.development.js":[function(require,module,exports) {
 /**
  * @license React
  * scheduler.development.js
@@ -29112,7 +29040,70 @@ if ("development" === 'production') {
     }
   };
 }
-},{"react-dom":"../../../node_modules/react-dom/index.js"}],"../../../node_modules/@ds/scss/lib/select.css":[function(require,module,exports) {
+},{"react-dom":"../../../node_modules/react-dom/index.js"}],"../../../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+var bundleURL = null;
+function getBundleURLCached() {
+  if (!bundleURL) {
+    bundleURL = getBundleURL();
+  }
+  return bundleURL;
+}
+function getBundleURL() {
+  // Attempt to find the URL of the current script and use that as the base URL
+  try {
+    throw new Error();
+  } catch (err) {
+    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
+    if (matches) {
+      return getBaseURL(matches[0]);
+    }
+  }
+  return '/';
+}
+function getBaseURL(url) {
+  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)?\/[^/]+(?:\?.*)?$/, '$1') + '/';
+}
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+},{}],"../../../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+var bundle = require('./bundle-url');
+function updateLink(link) {
+  var newLink = link.cloneNode();
+  newLink.onload = function () {
+    link.remove();
+  };
+  newLink.href = link.href.split('?')[0] + '?' + Date.now();
+  link.parentNode.insertBefore(newLink, link.nextSibling);
+}
+var cssTimeout = null;
+function reloadCSS() {
+  if (cssTimeout) {
+    return;
+  }
+  cssTimeout = setTimeout(function () {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+    for (var i = 0; i < links.length; i++) {
+      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
+        updateLink(links[i]);
+      }
+    }
+    cssTimeout = null;
+  }, 50);
+}
+module.exports = reloadCSS;
+},{"./bundle-url":"../../../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../../../node_modules/@ds/scss/styles/global.css":[function(require,module,exports) {
+
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+},{"_css_loader":"../../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../node_modules/@ds/scss/styles/select.css":[function(require,module,exports) {
+
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+},{"_css_loader":"../../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../node_modules/@ds/scss/styles/margin.css":[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
@@ -29124,9 +29115,9 @@ if ("development" === 'production') {
 var _react = _interopRequireDefault(require("react"));
 var _react2 = require("@ds/react");
 var _client = require("react-dom/client");
-require("@ds/scss/lib/global.css");
-require("@ds/scss/lib/select.css");
-require("@ds/scss/lib/margin.css");
+require("@ds/scss/styles/global.css");
+require("@ds/scss/styles/select.css");
+require("@ds/scss/styles/margin.css");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 function App() {
   var options = [{
@@ -29151,7 +29142,7 @@ function App() {
   }), _react.default.createElement(_react2.Text, null, "this is some text"));
 }
 (0, _client.createRoot)(document.getElementById("root")).render(_react.default.createElement(App, null));
-},{"react":"../../../node_modules/react/index.js","@ds/react":"../../../node_modules/@ds/react/lib/index.js","react-dom/client":"../../../node_modules/react-dom/client.js","@ds/scss/lib/global.css":"../../../node_modules/@ds/scss/lib/global.css","@ds/scss/lib/select.css":"../../../node_modules/@ds/scss/lib/select.css","@ds/scss/lib/margin.css":"../../../node_modules/@ds/scss/lib/margin.css"}],"../../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"../../../node_modules/react/index.js","@ds/react":"../../../node_modules/@ds/react/dist/index.js","react-dom/client":"../../../node_modules/react-dom/client.js","@ds/scss/styles/global.css":"../../../node_modules/@ds/scss/styles/global.css","@ds/scss/styles/select.css":"../../../node_modules/@ds/scss/styles/select.css","@ds/scss/styles/margin.css":"../../../node_modules/@ds/scss/styles/margin.css"}],"../../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -29176,7 +29167,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63576" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60154" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
