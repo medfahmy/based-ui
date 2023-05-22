@@ -1,0 +1,21 @@
+{
+    "name": "@ds.e/react",
+    "version": "1.0.0",
+    "main": "lib/index.js",
+    "module": "lib/index.js",
+    "author": "medfahmy",
+    "license": "MIT",
+    "type": "module",
+    "devDependencies": {
+        "@types/react": "^18.2.6",
+        "react": "^18.2.0",
+        "rollup": "^3.22.0",
+        "rollup-plugin-typescript2": "^0.34.1",
+        "typescript": "^5.0.4",
+        "@ds.e/foundation": "0.1.3"
+    },
+    "scripts": {
+        "build": "rollup -c",
+        "dev": "rollup -c -w"
+    }
+}

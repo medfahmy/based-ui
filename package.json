@@ -1,0 +1,26 @@
+{
+    "name": "@ds.e/core",
+    "version": "1.0.0",
+    "main": "index.js",
+    "author": "medfahmy",
+    "license": "MIT",
+    "private": true,
+    "workspaces": {
+        "packages": [
+            "packages/*",
+            "playgrounds/*"
+        ],
+        "nohoist": [
+            "**/normalize-scss"
+        ]
+    },
+    "devDependencies": {
+        "lerna": "^6.6.2",
+        "prettier": "^2.8.8"
+    },
+    "scripts": {
+        "build": "lerna run build",
+        "dev": "lerna run dev",
+        "prettier": "prettier --write \"**/*.{scss,css}\""
+    }
+}

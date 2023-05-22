@@ -1,0 +1,14 @@
+{
+    "name": "@ds.e/foundation",
+    "version": "1.0.0",
+    "main": "lib/index.js",
+    "author": "medfahmy",
+    "license": "MIT",
+    "devDependencies": {
+        "typescript": "^5.0.4"
+    },
+    "scripts": {
+        "build": "tsc",
+        "dev": "tsc -w"
+    }
+}

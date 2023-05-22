@@ -1,0 +1,34 @@
+:root {
+    --dse-body-text-color: #{$dark};
+    --dse-body-bg-color: #{$white};
+
+    --dse-btn-primary-color: #{$white};
+    --dse-btn-primary-bg: #{$green};
+    --dse-btn-primary-bg-hover: #{$green-light};
+
+    --dse-btn-secondary-color: #{$white};
+    --dse-btn-secondary-bg: #{$dark};
+
+    --dse-form-color: #{$dark};
+    --dse-form-bg: #{$white};
+    --dse-form-error-color: #{$red};
+    --dse-form-error-border: #{$red};
+    --dse-form-border-focus-color: #{$blue};
+
+    --dse-body-font-size: #{map-get($fs, fs-md)};
+    --dse-body-font-weight: #{map-get($fs, fw-regular)};
+
+    --dse-h1-font-size: #{$h1};
+    --dse-h2-font-size: #{$h2};
+    --dse-h3-font-size: #{$h3};
+    --dse-h4-font-size: #{$h4};
+    --dse-h5-font-size: #{$h5};
+    --dse-h6-font-size: #{$h6};
+
+    --dse-h1-font-weight: #{map-get($fs, fw-extrabold)};
+    --dse-h2-font-weight: #{map-get($fs, fw-bold)};
+    --dse-h3-font-weight: #{map-get($fs, fw-semibold)};
+    --dse-h4-font-weight: #{map-get($fs, fw-medium)};
+    --dse-h5-font-weight: #{map-get($fs, fw-regular)};
+    --dse-h6-font-weight: #{map-get($fs, fw-light)};
+}

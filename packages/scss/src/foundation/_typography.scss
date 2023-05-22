@@ -1,0 +1,19 @@
+// body text sizes
+$body-font-size: var(--dse-body-font-size, map-get($fs, fs-md)) !default;
+$body-font-weight: var(--dse-body-font-weight, map-get($fs, fw-regular)) !default;
+
+// heading text sizes
+$h-1-font-size: var(--dse-h1-font-size, $h1) !default;
+$h-2-font-size: var(--dse-h2-font-size, $h2) !default;
+$h-3-font-size: var(--dse-h3-font-size, $h3) !default;
+$h-4-font-size: var(--dse-h4-font-size, $h4) !default;
+$h-5-font-size: var(--dse-h5-font-size, $h5) !default;
+$h-6-font-size: var(--dse-h6-font-size, $h6) !default;
+
+// heading text weights
+$h-1-font-weight: var(--dse-h1-font-weight, map-get($fs, fw-extrabold)) !default;
+$h-2-font-weight: var(--dse-h2-font-weight, map-get($fs, fw-bold)) !default;
+$h-3-font-weight: var(--dse-h3-font-weight, map-get($fs, fw-semibold)) !default;
+$h-4-font-weight: var(--dse-h4-font-weight, map-get($fs, fw-medium)) !default;
+$h-5-font-weight: var(--dse-h5-font-weight, map-get($fs, fw-regular)) !default;
+$h-6-font-weight: var(--dse-h6-font-weight, map-get($fs, fw-light)) !default;
