@@ -6,30 +6,60 @@
     position: relative;
 
     &__label {
+        padding: map-get($spacing, "xs");
+        margin: 0;
         display: flex;
         align-items: center;
         justify-content: space-between;
         // @include padding("xs");
-        padding: map-get($spacing, "xs") map-get($spacing, "sm");
         border: 1px solid $form-border-color;
         background: $form-bg-color;
         font-family: $body-font-family;
         cursor: pointer;
+        width: 100%;
     }
 
     &__overlay {
         padding: 0;
         margin: 0;
-        border: 1px solid $form-border-color;
         background-color: $form-bg-color;
         z-index: 99;
         position: absolute;
         width: 100%;
+        border: 1px solid $form-border-color;
+        box-shadow: map-get($shadows, "base");
+        list-style-type: none;
+        box-sizing: border-box;
     }
 
     &__option {
-        padding: 0;
-        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        // width: 100%;
         cursor: pointer;
+        padding: map-get($spacing, "xs");
+        box-sizing: border-box;
+
+        &--selected {
+            background-color: $green;
+            color: $white;
+        }
+    }
+
+    &__option:hover {
+        background-color: $white-dark;
+    }
+
+    &__chevron {
+        transition: all 250ms ease;
+
+        &--open {
+            transform: rotate(180deg);
+        }
+
+        &--closed {
+            transform: rotate(0deg);
+        }
     }
 }

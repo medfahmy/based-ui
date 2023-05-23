@@ -23,8 +23,12 @@ function App() {
                 label="Select an option"
                 options={options}
                 onOptionSelected={onOptionSelected}
+                renderOption={({ option, getOptionRecommendedProps }) => (
+                    <p {...getOptionRecommendedProps()}>
+                        {option.label}
+                    </p>
+                )}
             />
-            <Text>this is some text</Text>
         </Margin>
     );
 }

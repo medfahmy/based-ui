@@ -5,28 +5,57 @@
 }
 
 .ds-select__label {
+  padding: 0.75rem;
+  margin: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.75rem 1rem;
   border: 1px solid var(--dse-form-border-color, #f1f2f3);
   background: var(--dse-form-bg, #ffffff);
   font-family: var(--dse-body-font-family, "Playfair", serif);
   cursor: pointer;
+  width: 100%;
 }
 
 .ds-select__overlay {
   padding: 0;
   margin: 0;
-  border: 1px solid var(--dse-form-border-color, #f1f2f3);
   background-color: var(--dse-form-bg, #ffffff);
   z-index: 99;
   position: absolute;
   width: 100%;
+  border: 1px solid var(--dse-form-border-color, #f1f2f3);
+  box-shadow: 0px 4px 11px rgba(157, 157, 157, 0.21);
+  list-style-type: none;
+  box-sizing: border-box;
 }
 
 .ds-select__option {
-  padding: 0;
-  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   cursor: pointer;
+  padding: 0.75rem;
+  box-sizing: border-box;
+}
+
+.ds-select__option--selected {
+  background-color: #5ece7b;
+  color: #ffffff;
+}
+
+.ds-select__option:hover {
+  background-color: #f1f2f3;
+}
+
+.ds-select__chevron {
+  transition: all 250ms ease;
+}
+
+.ds-select__chevron--open {
+  transform: rotate(180deg);
+}
+
+.ds-select__chevron--closed {
+  transform: rotate(0deg);
 }
